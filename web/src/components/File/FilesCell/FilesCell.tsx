@@ -1,0 +1,32 @@
+import type { FindFiles } from 'types/graphql'
+
+import { Link, routes } from '@redwoodjs/router'
+import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+
+import Files from 'src/components/File/Files'
+
+export const QUERY = gql`
+  query FindFiles {
+    files {
+      id
+      name
+      url
+      type
+      version
+    }
+  }
+`
+
+export const Loading = () => <div>Loading...</div>
+
+export const Empty = () => {
+  return <Files files={[]} />
+}
+
+export const Failure = ({ error }: CellFailureProps) => (
+  <div className="rw-cell-error">{error?.message}</div>
+)
+
+export const Success = ({ files }: CellSuccessProps<FindFiles>) => {
+  return <Files files={files} />
+}
