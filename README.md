@@ -13,7 +13,7 @@ Start by installing dependencies:
 yarn install
 ```
 
-To run the project you must have an account in [Filestack](https://dev.filestack.com/signup/free) and get the APIKEY as in the image below ![Getting Filestack APIKEY ](https://user-images.githubusercontent.com/300/82616735-ec41a400-9b82-11ea-9566-f96089e35e52.png).
+To run the project you must have an account in [Filestack](https://dev.filestack.com/signup/free) and get the APIKEY as in the image below ![Getting Filestack APIKEY ](https://user-images.githubusercontent.com/300/82616735-ec41a400-9b82-11ea-9566-f96089e35e52.png)
 
 After that create a `.env` file in the root of the project and add the `REDWOOD_ENV_FILESTACK_API_KEY` as your APIKEY value.
 
